@@ -36,6 +36,7 @@ const Sidebar = ({ isPro }: SidebarProps) => {
   const onNavigate = (url: string, pro: boolean) => {
     if (pro && !isPro) {
       proModal.onOpen();
+      return "";
     }
     return router.push(url);
   };
