@@ -4,7 +4,7 @@ import { currentUser } from "@clerk/nextjs";
 import { Replicate } from "langchain/llms/replicate";
 import { CallbackManager } from "langchain/callbacks";
 import { NextResponse } from "next/server";
-import prismadb from "@/lib/prismasb";
+import prismadb from "@/lib/prismadb";
 import { ratelimit } from "@/lib/rate-limit";
 import { MemoryManager } from "@/scripts/memory";
 

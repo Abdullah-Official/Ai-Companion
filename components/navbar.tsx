@@ -7,9 +7,8 @@ import { cn } from "@/lib/utils";
 import { UserButton } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "./mode-toggle";
-import MobileSidebar from "./mobile-sidebar";
 import { useProModalStore } from "@/hooks/use-pro-modal";
-import { boolean } from "zod";
+import { MobileSidebar } from "./mobile-sidebar";
 
 const font = Poppins({
   weight: "600",
@@ -25,7 +24,7 @@ export const Navbar = ({isPro}: NavbarProps) => {
   return (
     <div className="fixed flex w-full z-50 h-16 justify-between items-center py-2 px-4 border-b border-primary/10 bg-secondary">
       <div className="flex items-center">
-        <MobileSidebar />
+        <MobileSidebar isPro={isPro} />
         <Link href="/">
           <h1
             className={cn(

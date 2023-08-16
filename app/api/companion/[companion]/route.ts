@@ -1,4 +1,4 @@
-import prismadb from "@/lib/prismasb";
+import prismadb from "@/lib/prismadb";
 import { checkSubscription } from "@/lib/subscription";
 import { auth, currentUser } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
