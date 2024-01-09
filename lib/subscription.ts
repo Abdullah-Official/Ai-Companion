@@ -21,6 +21,7 @@ export const checkSubscription = async () => {
       stripePriceId: true,
     },
   })
+  console.log(userSubscription)
 
   if (!userSubscription) {
     return false;

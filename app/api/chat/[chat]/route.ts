@@ -113,6 +113,8 @@ export async function POST(
         .catch(console.error)
     );
 
+    console.log(resp, " RESP")
+
     const cleaned = resp.replaceAll(",", "");
     const chunks = cleaned.split("\n");
     const response = chunks[0];
@@ -144,7 +146,7 @@ export async function POST(
 
     return new StreamingTextResponse(s);
   } catch (error) {
-    console.log(error)
+    console.log(error, " ERRR")
     return new NextResponse("Internal Error", { status: 500 });
   }
 };
